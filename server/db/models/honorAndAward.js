@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const db = require('../db')
 
-const HonorAndAward = db.define('honorAndaward', {
+const HonorAndAward = db.define('honorAndAward', {
   title: {
     type: Sequelize.STRING,
     allowNull: false
@@ -19,6 +19,9 @@ const HonorAndAward = db.define('honorAndaward', {
     validate: {
         isDate: true
     }
+  },
+  description: {
+    type: Sequelize.TEXT
   }
 })
 
